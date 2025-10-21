@@ -15,12 +15,29 @@ To write a program to prepare EMI calculator using function without return type 
 
 ## PROGRAM
 
+```
+#include<stdio.h>
+#include<math.h>
+void emi(float p,float r,float t){
+    float e;
+    r=r/(12*100);
+    e=(p*r*pow(1+r,t))/(pow(1+r,t)-1);
+    printf("EMI = %.2f",e);
+}
+int main(){
+    float a,b,c;
+    scanf("%f%f%f",&a,&b,&c);
+    emi(a,b,c);
+    return 0;
+}
+
+```
 
 ## OUTPUT
 
 
 
-
+![alt text](11.png)
 
 ## RESULT
 
@@ -43,10 +60,24 @@ To write a C program to generate the Fibonacci series for the value 6.
 7.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h>
+int main(){
+    int a=0,b=1,c,i,n=6;
+    printf("%d %d ",a,b);
+    for(i=2;i<n;i++){
+        c=a+b;
+        printf("%d ",c);
+        a=b;
+        b=c;
+    }
+    return 0;
+}
+```
 
 ## OUTPUT
 
-
+![alt text](12.png)
 
 
 
@@ -71,11 +102,23 @@ To write a C program to read n elements as input and print the last element of t
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h>
+int main(){
+    int a[100],n,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("%d",a[n-1]);
+    return 0;
+}
+```
 
 ## OUTPUT
 
 
-
+![alt text](13.png)
 
 
 
@@ -101,12 +144,26 @@ To write a C Program to count total number of positive elements in an array.
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h>
+int main(){
+    int a[100],n,i,c=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+        if(a[i]>0)
+            c++;
+    }
+    printf("%d",c);
+    return 0;
+}
+```
 
 
 ## OUTPUT
 
 
-
+![alt text](14.png)
 
 
 ## RESULT
@@ -137,9 +194,25 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
  Print the updated array after replacements.
 
 ## Program:
+```
+#include<stdio.h>
+int main(){
+    int a[100],n,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<n;i++){
+        if(a[i]%2==0)
+            printf("E ");
+        else
+            printf("%d ",a[i]);
+    }
+    return 0;
+}
+```
 
 ## Output:
- 
+ ![alt text](15.png)
 
 
 ## Result:
